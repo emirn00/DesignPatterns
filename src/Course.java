@@ -6,6 +6,11 @@ public class Course implements Subject {
     private String CourseName ;
     private String InstructorName ;
 
+
+    public Course(String CourseName , String InstructorName){
+        this.CourseName = CourseName ; 
+        this.InstructorName = InstructorName ;
+    }
     @Override
     public void registerStudent(Student student) {
         enrollingStudents.add(student);
@@ -20,6 +25,12 @@ public class Course implements Subject {
     public void notifyStudent(Student student) {
         for (Student students : enrollingStudents) {
             students.update("Update");
+        }
+    }
+
+    void printObservers(){
+        for (Student student : enrollingStudents) {
+            System.out.println(student.name);
         }
     }
 

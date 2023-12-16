@@ -1,9 +1,9 @@
 /**
  * Course
  */
-public interface Course {
+public interface Subject {
 
-    void registerStudent();
-    void removeStudent();
-    void notifyStudent();
+    void registerStudent(Student student);
+    void removeStudent(Student student);
+    void notifyStudent(Student student);
 }
