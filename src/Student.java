@@ -3,13 +3,9 @@ public class Student {
     public int number;
 
 
-    private Student(String name , int number){
+    protected Student(String name , int number){
         this.name = name ; 
         this.number = number ;
-    }
-
-    public static Student createStudent(String name , int number){
-        return new Student( name ,  number);
     }
 
     public String toString(){
@@ -17,3 +13,5 @@ public class Student {
         return "Name : " +name + " " + "Number : " +number ;
     }
 }
+
+
