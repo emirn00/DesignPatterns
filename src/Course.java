@@ -11,6 +11,9 @@ public class Course implements Subject {
         this.CourseName = CourseName ; 
         this.InstructorName = InstructorName ;
     }
+    
+
+    
     @Override
     public void registerStudent(Student student) {
         enrollingStudents.add(student);
@@ -28,9 +31,9 @@ public class Course implements Subject {
         }
     }
 
-    void printObservers(){
+    void printStudents(){
         for (Student student : enrollingStudents) {
-            System.out.println(student.name);
+            System.out.println(student.getName());
         }
     }
 
@@ -40,4 +43,10 @@ public class Course implements Subject {
     }
     
     
+}
+ interface Subject {
+
+    void registerStudent(Student student);
+    void removeStudent(Student student);
+    void notifyStudent(Student student);
 }
