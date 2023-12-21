@@ -12,12 +12,14 @@ public class Main {
 
         System.out.println(DP);
 
-        DP.printObservers();
+        DP.printStudents();
 
         DP.removeStudent(student1);
         System.out.println("************");
-        DP.printObservers();
+        DP.printStudents();
+        student1.update("update");
 
+        
         
 
         

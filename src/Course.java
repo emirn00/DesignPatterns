@@ -26,9 +26,7 @@ public class Course implements Subject {
 
     @Override
     public void notifyStudent(Student student) {
-        for (Student students : enrollingStudents) {
-            students.update("Update");
-        }
+        student.update("updated");
     }
 
     void printStudents(){
@@ -49,4 +47,5 @@ public class Course implements Subject {
     void registerStudent(Student student);
     void removeStudent(Student student);
     void notifyStudent(Student student);
+    
 }

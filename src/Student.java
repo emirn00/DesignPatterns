@@ -1,6 +1,6 @@
 public class Student implements StudentInterface{
-    public String name ;
-    public int number;
+    private String name ;
+    private int number;
 
 
     private Student(String name , int number){
@@ -21,6 +21,14 @@ public class Student implements StudentInterface{
     public void update(String x) {
         
         System.out.println(x);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getNumber() {
+        return number;
     }
 }
 
