@@ -9,6 +9,13 @@ public class Main {
         DP.registerStudent(student1);
         DP.registerStudent(student2);
 
+        Grade dpgrade = new GradeSystem();
+
+        dpgrade = new VisaGradeDecorator(dpgrade, 60);
+        dpgrade = new ProjectGradeDecorator(dpgrade, 70);
+        dpgrade = new FinalGradeDecorator(dpgrade, 80);
+
+        System.out.println(dpgrade.calculateGrade());
 
         System.out.println(DP);
 
@@ -18,7 +25,6 @@ public class Main {
         System.out.println("************");
         DP.printStudents();
         student1.update("update");
-
         
         
 

@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Course implements Subject {
+public class Course  implements Subject  {
     private final List<Student> enrollingStudents = new ArrayList<>();
     private String CourseName ;
     private String InstructorName ;
