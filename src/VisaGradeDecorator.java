@@ -9,6 +9,6 @@ public class VisaGradeDecorator extends GradeDecorator {
 
     @Override
     public int calculateGrade() {
-        return super.calculateGrade() +visaGrade;
+        return super.calculateGrade() +visaGrade*30/100;
     }
 }

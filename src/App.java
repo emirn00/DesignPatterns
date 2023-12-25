@@ -1,4 +1,4 @@
-public class Main {
+public class App {
     public static void main(String[] args) throws Exception {
         
         Student student1 =  Student.createStudent("Emir Nar", 1);
@@ -10,21 +10,17 @@ public class Main {
         DP.registerStudent(student2);
 
         Grade dpgrade = new GradeSystem();
-
-        dpgrade = new VisaGradeDecorator(dpgrade, 60);
-        dpgrade = new ProjectGradeDecorator(dpgrade, 70);
-        dpgrade = new FinalGradeDecorator(dpgrade, 80);
-
-        System.out.println(dpgrade.calculateGrade());
+        
+        System.out.println("****************");
 
         System.out.println(DP);
 
         DP.printStudents();
 
-        DP.removeStudent(student1);
-        System.out.println("************");
-        DP.printStudents();
-        student1.update("update");
+        dpgrade = new VisaGradeDecorator(dpgrade, 60);
+        dpgrade = new ProjectGradeDecorator(dpgrade, 70);
+        dpgrade = new FinalGradeDecorator(dpgrade, 90);
+        System.out.println(dpgrade.calculateGrade());
         
         
 

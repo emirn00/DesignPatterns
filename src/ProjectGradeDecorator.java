@@ -9,7 +9,7 @@ public class ProjectGradeDecorator extends GradeDecorator {
 
     @Override
     public int calculateGrade() {
-        return super.calculateGrade() +ProjectGrade;
+        return super.calculateGrade() +ProjectGrade*30/100;
     }
 }
 

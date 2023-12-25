@@ -2,7 +2,6 @@ public class Student implements StudentInterface{
     private String name ;
     private int number;
 
-
     private Student(String name , int number){
         this.name = name ; 
         this.number = number ;
@@ -30,6 +29,7 @@ public class Student implements StudentInterface{
     public int getNumber() {
         return number;
     }
+
 }
 
 interface StudentInterface{

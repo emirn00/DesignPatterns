@@ -10,6 +10,6 @@ public class FinalGradeDecorator extends GradeDecorator {
 
     @Override
     public int calculateGrade() {
-        return super.calculateGrade() +FinalGrade;
+        return super.calculateGrade() +FinalGrade*40/100;
     }
 }
