@@ -1,10 +1,16 @@
-public class Student implements StudentInterface{
+import java.util.HashSet;
+import java.util.Set;
+
+public class Student implements StudentOperations{
     private String name ;
     private int number;
+    private static Set<Integer> existingNumbers = new HashSet<>();
+    
 
     private Student(String name , int number){
-        this.name = name ; 
-        this.number = number ;
+        this.name = name;
+        this.number = number;   
+        existingNumbers.add(number);
     }
 
     public String toString(){
@@ -13,7 +19,14 @@ public class Student implements StudentInterface{
     }
 
     public static Student createStudent(String name , int number){
-        return new Student(name , number);
+
+        if (existingNumbers.contains(number)) {
+            throw new IllegalArgumentException("There is already a student have this number!");
+        }
+
+        return new Student(name, number);
+
+        
     }
 
     @Override
@@ -32,7 +45,7 @@ public class Student implements StudentInterface{
 
 }
 
-interface StudentInterface{
+interface StudentOperations{
     void update(String x);
 }
 

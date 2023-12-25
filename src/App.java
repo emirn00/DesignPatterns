@@ -3,24 +3,27 @@ public class App {
         
         Student student1 =  Student.createStudent("Emir Nar", 1);
         Student student2 =  Student.createStudent("Mehmet Yıldız", 2);
+        Student student3 =  Student.createStudent("Mehmet Yıldız", 3);
         
-
         Course DP = new Course("Design Pattern", "Alper Bilge");
         DP.registerStudent(student1);
         DP.registerStudent(student2);
 
-        Grade dpgrade = new GradeSystem();
-        
-        System.out.println("****************");
+        Grade student1grade = new GradeSystem(student1 , DP);
+        Grade student2grade = new GradeSystem(student2, DP);
 
-        System.out.println(DP);
+        student1grade = new VisaGradeDecorator(student1grade, 60);
+        student1grade = new ProjectGradeDecorator(student1grade, 60);
+        student1grade = new FinalGradeDecorator(student1grade, 90);
 
+        student2grade = new VisaGradeDecorator(student2grade, 45);
+        student2grade = new ProjectGradeDecorator(student2grade, 80);
+        student2grade = new FinalGradeDecorator(student2grade, 80);
         DP.printStudents();
 
-        dpgrade = new VisaGradeDecorator(dpgrade, 60);
-        dpgrade = new ProjectGradeDecorator(dpgrade, 70);
-        dpgrade = new FinalGradeDecorator(dpgrade, 90);
-        System.out.println(dpgrade.calculateGrade());
+        
+        System.out.println(student1grade.calculateGrade());
+        System.out.println(student2grade.calculateGrade());
         
         
 

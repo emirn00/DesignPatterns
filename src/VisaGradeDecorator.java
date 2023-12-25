@@ -11,4 +11,14 @@ public class VisaGradeDecorator extends GradeDecorator {
     public int calculateGrade() {
         return super.calculateGrade() +visaGrade*30/100;
     }
+
+    @Override
+    public Course getCourse() {
+        return grade.getCourse();
+    }
+
+    @Override
+    public Student getStudent() {
+        return grade.getStudent();
+    }
 }
