@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
-public class Student implements StudentOperations{
+public class Student  implements StudentOperations{
     private String name ;
     private int number;
     private static Set<Integer> existingNumbers = new HashSet<>();
@@ -45,8 +45,6 @@ public class Student implements StudentOperations{
 
 }
 
-interface StudentOperations{
-    void update(String x);
-}
+
 
 

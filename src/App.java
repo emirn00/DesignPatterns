@@ -3,8 +3,7 @@ public class App {
         
         Student student1 =  Student.createStudent("Emir Nar", 1);
         Student student2 =  Student.createStudent("Mehmet Yıldız", 2);
-        Student student3 =  Student.createStudent("Mehmet Yıldız", 3);
-        
+               
         Course DP = new Course("Design Pattern", "Alper Bilge");
         DP.registerStudent(student1);
         DP.registerStudent(student2);
@@ -19,9 +18,7 @@ public class App {
         student2grade = new VisaGradeDecorator(student2grade, 45);
         student2grade = new ProjectGradeDecorator(student2grade, 80);
         student2grade = new FinalGradeDecorator(student2grade, 80);
-        DP.printStudents();
-
-        
+        DP.printStudents();  
         System.out.println(student1grade.calculateGrade());
         System.out.println(student2grade.calculateGrade());
         

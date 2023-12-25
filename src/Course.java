@@ -42,10 +42,4 @@ public class Course  implements Subject  {
     
     
 }
- interface Subject {
-
-    void registerStudent(Student student);
-    void removeStudent(Student student);
-    void notifyStudent(Student student);
-    
-}
+ 
